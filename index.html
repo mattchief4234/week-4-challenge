@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Code Quiz</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+              crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+                crossorigin="anonymous" defer></script>
+        <script src="./assets/js/script.js" defer></script>
+
+        <div class="container">
+            <div class="row">
+
+                <header id="header" class="col-12 mt-5 mb-5 p-2">
+                    <div class="row align-items-center">
+                        <h5 id="view-leaderboard" class="col text-center">View Leaderboard</h5>
+                        <h2 class="col-6 text-center">JavaScript Quiz</h2>
+                        <div class="col text-center">
+                            <h5 class="col text-center">Time Remaining: </h5>
+                            <div class="timer-count">120</div>
+                        </div>
+                    </div>
+                </header>
+
+                <article class="col-12 p-2">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-10">
+                            <!-- start button implementation -->
+                            <div id="home" class="d-flex row justify-content-center">
+                                <button id="start-button" class="btn btn-primary w-auto">Start Quiz</button>
+                            </div>
+
+                            <div id="question" class="row text-center d-none">
+                                <h3 class="col-12 p-3 text-center">Some random question about JavaScript?</h3>
+                                <ul class="list-unstyled">
+                                </ul>
+                                <h5 id="wrong-ans" class="col-12 p-2"></h5>
+                            </div>
+
+                            <div id="highscore" class="row text-center d-none">
+                                <h5 id="new-highscore" class="col-12 p-3 text-center d-none">New Highscore!</h5>
+                                <h3 class="col-12 p-3 text-center">Score: <span></span></h3>
+                                    <div class="col-4"></div>
+                                    <form id="highscore-form" class="col-3" method="POST">
+                                        <label class="mb-3" for="initials-text">Initials:</label>
+                                        <input type="text" placeholder="AAA" name="initials-text"
+                                               id="initials-text" maxlength="3" class="mb-3 "/>
+                                        <button class="btn btn-primary">Submit Highscore</button>
+                                        <button id="go-home-button" class="btn btn-secondary">Home</button>
+                                    </form>
+                                    <div class="col-3"></div>
+                            </div>
+
+                            <table id="leaderboard" class="table table-hover d-none">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Initials</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body" class="table-secondary">
+                                </tbody>
+                                <button id="clear-highscores" class="btn btn-outline-danger d-none">Clear Highscores</button>
+                            </table>
+
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </article>
+
+            </div> 
+        </div> 
+    </body>
+</html
